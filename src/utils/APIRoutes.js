@@ -1,4 +1,4 @@
-export const host = "https://peaceful-brushlands-56321.herokuapp.com";
+export const host = process.env.REACT_APP_BASEURL;
 export const sendMessageRoute = `${host}/chat/add`;
 export const recieveMessageRoute = `${host}/chat/get`;
 export const deleteMessageRoute = `${host}/chat/delete`;
