@@ -15,7 +15,7 @@ import { margin } from "@mui/system";
 import Like from "../Alerts/Like";
 import { useEffect, useState } from "react";
 import axios from "axios";
-import baseURL from "./../utils/configuration";
+import { host } from '../utils/APIRoutes';
 import { useCookies } from "react-cookie";
 
 function Posts(props) {
@@ -30,7 +30,7 @@ function Posts(props) {
             return <Navigate to="/" />;
         } else {
             axios
-                .get(baseURL + "/like/" + cookies.email)
+                .get(host + "/like/" + cookies.email)
                 .then((res) => {
                     setLikedPosts(res.data.likedPosts);
                 })
@@ -40,7 +40,7 @@ function Posts(props) {
 
     const handleLike = (postId, liked) => {
         axios
-            .put(baseURL + "/like/update", {
+            .put(host + "/like/update", {
                 email: cookies.email,
                 postId: postId,
             })

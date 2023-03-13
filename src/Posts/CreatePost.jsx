@@ -26,7 +26,7 @@ import axios from "axios";
 import Alert from "../Alerts/Alert";
 
 import { useCookies } from "react-cookie";
-import baseURL from "../utils/configuration";
+import { host } from '../utils/APIRoutes';
 import Validations from "./Validations";
 
 const CreatePost = () => {
@@ -92,7 +92,7 @@ const CreatePost = () => {
             setErrors(result);
         } else {
             axios
-                .get(baseURL + "/auth/profile/" + cookies.email)
+                .get(host + "/auth/profile/" + cookies.email)
                 .then((res) => {
                     fields.firstName = res.data.user.firstname;
                     fields.lastName = res.data.user.lastname;
@@ -101,7 +101,7 @@ const CreatePost = () => {
                         res.data.user.buildingNo + " ," + res.data.user.address;
 
                     axios
-                        .post(baseURL + "/posts/create", fields)
+                        .post(host + "/posts/create", fields)
                         .then((res) => {
                             Alert({
                                 icon_name: "success",

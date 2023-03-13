@@ -5,9 +5,9 @@ import { Formik, Form, Field, ErrorMessage } from 'formik'
 import * as Yup from 'yup'
 // import { useNavigate } from "react-router-dom";
 import Tooltip from '@mui/material/Tooltip';
+import { host } from "../../utils/APIRoutes";
 
-const baseUrl = "https://peaceful-brushlands-56321.herokuapp.com";
-const signupUrl = baseUrl + "/auth/signup";
+const signupUrl = host + "/auth/signup";
 const Signup = (props) => {
     // const navigate = useNavigate();
     const paperStyle = {padding: '30px 20px',

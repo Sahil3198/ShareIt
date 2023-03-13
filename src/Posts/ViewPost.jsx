@@ -34,8 +34,6 @@ const Item = styled(Paper)(({ theme }) => ({
     color: theme.palette.text.secondary,
 }));
 
-// const baseURL = "https://peaceful-brushlands-56321.herokuapp.com/";
-
 const ViewPost = () => {
     let { id } = useParams();
     const [{ formValues }, dispatch] = useStateValue();

@@ -6,9 +6,9 @@ import LockResetOutlinedIcon from '@mui/icons-material/LockResetOutlined';
 import Tooltip from '@mui/material/Tooltip';
 import { useCookies } from "react-cookie";
 import "../style.css";
+import { host } from '../../utils/APIRoutes';
 
-const baseUrl = "https://peaceful-brushlands-56321.herokuapp.com";
-const loginUrl = baseUrl + "/auth/forget";
+const loginUrl = host + "/auth/forget";
 const Forgotpassword = () => {
     const [cookies] = useCookies(['user']);
     const paperStyle = {

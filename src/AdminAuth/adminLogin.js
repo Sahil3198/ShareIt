@@ -15,11 +15,9 @@ import Tooltip from "@mui/material/Tooltip";
 import { useNavigate } from "react-router-dom";
 import { useCookies } from "react-cookie";
 import "./adminAuthStyle.css"
+import { host } from '../utils/APIRoutes';
 
-
-
-const baseUrl = "https://peaceful-brushlands-56321.herokuapp.com";
-const loginUrl = baseUrl + "/admin/signin";
+const loginUrl = host + "/admin/signin";
 const AdminLogin = ({ handleChange }) => {
 
   const [cookies, setCookie] = useCookies(['admin']);

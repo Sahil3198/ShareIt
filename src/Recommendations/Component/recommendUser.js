@@ -9,8 +9,10 @@ import "axios"
 import axios from 'axios';
 import { useCookies } from "react-cookie";
 import "../Styles/style.css";
-const baseURL = "https://peaceful-brushlands-56321.herokuapp.com/"
-const recommendURL = baseURL + "recommend/recommend"
+import { host } from '../../utils/APIRoutes';
+
+
+const recommendURL = host + "recommend/recommend"
 
 const style = {
     position: 'absolute',

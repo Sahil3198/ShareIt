@@ -20,7 +20,7 @@ const UserProfile = () => {
         try {
             // +itemId.id
             console.log(itemId.id);
-            const { data: response } = await axios.get(process.env.REACT_APP_BASEURL + 'feed/posts/' + itemId.id);
+            const { data: response } = await axios.get(process.env.REACT_APP_BASEURL + '/feed/posts/' + itemId.id);
             console.log(response.posts)
             setData1(response.posts);
 

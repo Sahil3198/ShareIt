@@ -17,8 +17,9 @@ import { useCookies } from "react-cookie";
 import "../styles/profilePage.css";
 import ErrorNotFound from "./error404";
 import AccountBalanceIcon from '@mui/icons-material/AccountBalance';
-const baseURL = "https://peaceful-brushlands-56321.herokuapp.com/";
-const adminProfileURL = baseURL + "admin/profile/";
+import { host } from '../../utils/APIRoutes';
+
+const adminProfileURL = host + "/admin/profile/";
 const style = {
   position: "absolute",
   top: "30%",

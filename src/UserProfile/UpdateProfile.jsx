@@ -6,11 +6,10 @@ import {
   import TextField from "@mui/material/TextField";
   import { useState } from "react";
   import { useCookies } from "react-cookie";
-  
-  
+  import { host } from "../utils/APIRoutes";
   import Alert from "../Alerts/Alert";
-  const baseUrl = "https://peaceful-brushlands-56321.herokuapp.com";
-  const updateUrl = baseUrl + "/auth/profile";
+
+  const updateUrl = host + "/auth/profile";
   const UpdateProfile = () => {
     const [cookies] = useCookies(['user']);
     // Alert({ icon_name: "warning", message: "check your posts quantity" });

@@ -11,9 +11,9 @@ import { CardContent, Grid, Table, TableBody, TableCell, TableContainer, TableHe
 import Card from '@mui/material/Card';
 import Paper from '@mui/material/Paper';
 import axios from "axios";
+import { host } from '../../utils/APIRoutes';
 
-const baseURL = "https://peaceful-brushlands-56321.herokuapp.com"
-const transactionUrl = baseURL + "/admin/transactions";
+const transactionUrl = host + "/admin/transactions";
 class TableCmp extends React.Component{
     constructor(props){
         super(props);

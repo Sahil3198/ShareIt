@@ -15,7 +15,7 @@ function PostFeed() {
     
     // const baseUrl = "http://127.0.0.1:3001";
     const baseUrl = process.env.REACT_APP_BASEURL;
-    const url = baseUrl + "feed/posts";
+    const url = baseUrl + "/feed/posts";
     
     
 

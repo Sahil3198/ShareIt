@@ -20,8 +20,7 @@ import {
   host,
 } from "../../utils/APIRoutes";
 
-const baseUrl = "https://peaceful-brushlands-56321.herokuapp.com";
-const loginUrl = baseUrl + "/auth/signin";
+const loginUrl = host + "/auth/signin";
 const Login = ({ handleChange }) => {
 
   const [cookies, setCookie] = useCookies(['user']);

@@ -15,13 +15,12 @@ import axios from "axios";
 import '../styles/mainPageCards.css';
 import { useCookies } from "react-cookie";
 import ErrorNotFound from "./error404";
+import { host } from '../../utils/APIRoutes';
 const style = {
     bgcolor :  '#F2F2F2'
 }
 
-
-const baseURL = "https://peaceful-brushlands-56321.herokuapp.com/"
-const getCardDataUrl = baseURL + "admin/details/"
+const getCardDataUrl = host + "/admin/details/"
 class MainPageCard extends React.Component{
     
     constructor(props){

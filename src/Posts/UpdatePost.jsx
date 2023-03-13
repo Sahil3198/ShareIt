@@ -24,13 +24,10 @@ import { useCookies } from "react-cookie";
 import { useLocation, useNavigate, Navigate } from "react-router-dom";
 import axios from "axios";
 import { useEffect } from "react";
-import baseURL from "../utils/configuration";
+import { host } from '../utils/APIRoutes';
 import Validations from "./Validations";
 
 let fetchContent = true;
-
-// const baseURL = "https://peaceful-brushlands-56321.herokuapp.com/";
-// const baseURL = "http://localhost:3001/";
 
 const UpdatePost = () => {
     // Alert({ icon_name: "warning", message: "check your posts quantity" });
@@ -94,7 +91,7 @@ const UpdatePost = () => {
         console.log("use effect");
         if (fetchContent === true) {
             axios
-                .get(baseURL + "/posts/" + location.state.id)
+                .get(host + "/posts/" + location.state.id)
                 .then((res) => {
                     // console.log(res);
                     setFields(res.data.result);
@@ -144,7 +141,7 @@ const UpdatePost = () => {
             setErrors(result);
         } else {
             axios
-                .put(baseURL + "/posts/update", fields)
+                .put(host + "/posts/update", fields)
                 .then((res) => {
                     Alert({
                         icon_name: "success",

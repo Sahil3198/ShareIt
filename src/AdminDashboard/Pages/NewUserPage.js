@@ -5,7 +5,6 @@ import React from "react";
 import Box from '@mui/material/Box';
 import CssBaseline from '@mui/material/CssBaseline';
 import Divider from '@mui/material/Divider';
-
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import Sidebar from "../Components/sidebar";
@@ -16,11 +15,11 @@ import Paper from '@mui/material/Paper';
 import "../styles/newUsers.css"
 import { useCookies } from "react-cookie";
 import ErrorNotFound from "./error404";
+import { host } from '../../utils/APIRoutes';
 
-const baseURL = "https://peaceful-brushlands-56321.herokuapp.com/"
-const acceptURL = baseURL + "admin/application/accept";
-const rejectURL = baseURL + "admin/application/reject";
-const getApplicationUrl =  baseURL + "admin/applications"
+const acceptURL = host + "/admin/application/accept";
+const rejectURL = host + "/admin/application/reject";
+const getApplicationUrl =  host + "/admin/applications"
 const style = {
     position: 'absolute',
     top: '40%',
